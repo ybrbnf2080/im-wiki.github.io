@@ -2,8 +2,8 @@ main:
 
   - title: "Шаблон страниц"
     url: /template
-    icon: /assets/images/reductBlack.png
-  - title: "Telegram-канал"
+    icon: /assets/images/icon-template.png
+  - title: "Канал"
     url: https://t.me/imwiki
     icon: /assets/images/telegramBlack.png
 
