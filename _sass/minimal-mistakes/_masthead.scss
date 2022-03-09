@@ -85,7 +85,9 @@
 .masthead__menu-item {
   display: block;
   flex-grow: 1;
-
+  img{
+    margin-right: 4px;
+  }
   &--lg {
     padding-right: 2em;
     font-weight: 700;
