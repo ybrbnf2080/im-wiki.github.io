@@ -16,7 +16,7 @@ sidebar:
 Языки | -, [английский]({{site.info__speak_en}}) (-%)
 [ВВП]({{info__site.vvp}}) | - (- место)
 [ВВП на душу]({{site.info__vvp_on_unit}}) | - (- место)
-[ИЧР]({{site.ichr}}) | - (- место)
+[ИЧР]({{site.info__ichr}}) | - (- место)
 [Коррупция]({{site.info__corruption}}) | - (- место)
 [Убийств на 100тыс]({{site.info__kill_per_unit}}) | - (- место)
 [Ср. прод. жизни]({{site.info__time_life}}) | - (- место)
