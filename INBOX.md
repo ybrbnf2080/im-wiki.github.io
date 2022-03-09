@@ -18,3 +18,10 @@
     - На машине
     - На карабле
 - ### Налоговая система
+
+
+## Группы для постов с беженцами
+- https://www.facebook.com/groups/bizensto/
+- https://www.facebook.com/groups/485314373128655/
+- https://www.facebook.com/groups/565315117573722/
+- https://www.facebook.com/groups/478919340437732/
