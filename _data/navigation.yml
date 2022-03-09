@@ -2,8 +2,10 @@ main:
 
   - title: "Шаблон страниц"
     url: /template
+    icon: /assets/images/reductBlack.png
   - title: "Telegram-канал"
     url: https://t.me/imwiki
+    icon: /assets/images/telegramBlack.png
 
 docs:
   - title: Страны по ИЧР
