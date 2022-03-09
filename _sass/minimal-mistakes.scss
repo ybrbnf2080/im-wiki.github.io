@@ -38,3 +38,8 @@
 @import "minimal-mistakes/archive";
 @import "minimal-mistakes/sidebar";
 @import "minimal-mistakes/print";
+
+h2 {
+    background-color: rgba(187, 187, 187, 0.563);
+    padding: 0.5rem;
+}
