@@ -83,3 +83,12 @@
     }
   }
 }
+a{
+  font-weight: bold;
+  border-radius: 10px;
+  padding-left: 10px;
+  &:visited,&, &:active{
+    color: white;
+    text-decoration: none;
+  }
+}
