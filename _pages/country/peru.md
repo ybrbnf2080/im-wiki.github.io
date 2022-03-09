@@ -14,7 +14,7 @@ sidebar:
 
 ------ | ------
 Языки | -, [английский]({{site.info__speak_en}}) (-%)
-[ВВП]({{info__site.vvp}}) | - (- место)
+[ВВП]({{site.info__vvp}}) | - (- место)
 [ВВП на душу]({{site.info__vvp_on_unit}}) | - (- место)
 [ИЧР]({{site.info__ichr}}) | - (- место)
 [Коррупция]({{site.info__corruption}}) | - (- место)
