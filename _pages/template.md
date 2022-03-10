@@ -1,5 +1,5 @@
 ---
-title: "Шаблон страницы страны | WIKI-ИММИГРАЦИЯ"
+title: "Шаблон страницы страны | wiki-ИММИГРАЦИЯ"
 layout: page
 permalink: /template
 sidebar:
