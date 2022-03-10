@@ -12,18 +12,26 @@ include breadcrumbs.html %} {% endunless %} {% endif %}
   {% include sidebar.html %}
 
   <div class="archive">
-    <div class="link-to">
-      <a
-        href="https://github.com/im-wiki/im-wiki.github.io/edit/main/_pages/{{ page.permalink }}.md"
-        class="github"
-      >
-        <img src="/assets/images/reduct.png" alt="" style="" />
-        Редактировать страницу на GitHub
-      </a>
-      <a href="https://t.me/+FHi3FnJaoWJkMDAx" class="telegram">
-        <img src="/assets/images/telegram.png" alt="" style="" />
-        Группа волонтеров
-      </a>
+    <div class="top-bar">
+
+      <div class="link-to">
+        <div>
+          <h1>
+            {{page.title}}
+          </h1>
+        </div>
+        <a
+          href="https://github.com/im-wiki/im-wiki.github.io/edit/main/_pages/{{ page.permalink }}.md"
+          class="github"
+        >
+          <img src="/assets/images/github.png" alt="" style="" />
+          
+        </a>
+        <a href="https://t.me/+FHi3FnJaoWJkMDAx" class="telegram">
+
+          <img src="/assets/images/telegram.png" alt="" style="" />
+        </a>
+      </div>
     </div>
     {% unless page.header.overlay_color or page.header.overlay_image %} {%
     endunless %} {{ content }}
