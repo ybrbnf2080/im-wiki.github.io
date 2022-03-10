@@ -6,15 +6,17 @@
       <nav id="site-nav" class="greedy-nav">
         <div>
           <a href="{{ site.url }}">
-            <b style="font-size: 1rem">wiki-ИММИГРАЦИЯ</b><br />
-            <i style="font-size: 0.7rem">Свободный информационный проект</i>
+            <img
+              src="/assets/images/head-logo.png"
+              alt=""
+              style="max-width: 100%"
+            />
           </a>
         </div>
 
         <ul class="cust-visible-links">
           {%- for link in site.data.navigation.main -%}
           <li class="masthead__menu-item">
-            
             <a
               href="{{ link.url | relative_url }}"
               {%
@@ -25,11 +27,10 @@
               {%
               endif
               %}
-              >
+            >
               {% if link.icon %}
-                <img src="{{ link.icon }}" alt="">
-              {% endif %}
-            {{ link.title }}</a
+              <img src="{{ link.icon }}" alt="" />
+              {% endif %} {{ link.title }}</a
             >
           </li>
           {%- endfor -%}
