@@ -7,6 +7,10 @@ locale: "ru-RU"
 title: ""
 title_separator: ""
 subtitle: "Открытый информационный wiki-проект"
+data: 
+  ui-text:
+    ru-RU:
+      menu_label: "Список стран"
 #description             :
 url: "https://im-wiki.github.io"
 #baseurl                 :
