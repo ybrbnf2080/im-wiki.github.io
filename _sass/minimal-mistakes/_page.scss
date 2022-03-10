@@ -566,11 +566,18 @@ body {
 .link-to{
   display: flex;
   flex-wrap: wrap;
+  div{
+    margin: auto;
+    margin-left: 0px;
+    h1{
+      margin: 0;
+    }
+  }
   a{
     display: block;
     margin: 10px;
     font-weight: bold;
-    padding: 14px;
+    padding: 5px;
     border-radius: 10px;
     padding-left: 10px;
     &:visited,&, &:active{
