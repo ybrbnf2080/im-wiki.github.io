@@ -8,7 +8,7 @@ sidebar:
 
 <h3 style="color: red;">⚠️⚠️⚠️ САЙТ ТОЛЬКО ЗАПУСТИЛСЯ И НАХОДИТСЯ В ПРОЦЕССЕ ЗАПОЛНЕНИЯ. ЗА ОБНОВЛЕНИЯМИ СЛЕДИТЕ В <a href="https://t.me/imwiki">TELEGRAM-КАНАЛЕ</a>, А ЛУЧШЕ, ПОДКЛЮЧИТЕСЬ К <a href="https://t.me/+FHi3FnJaoWJkMDAx">РАБОЧЕЙ ГРУППЕ</a> ВОЛОНТЁРОВ И ПОМОГИТЕ НАМ НАЙТИ ЭКСПЕРТОВ ПО КАЖДОЙ СТРАНЕ.</h3>
 
-{% include editButton %}
+{% include edit %}
 
 ## Главное
 
