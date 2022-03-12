@@ -5,17 +5,26 @@
         let question= pointBut.previousElementSibling.previousElementSibling
         let response = pointBut.previousElementSibling
 
-        document.getElementById("insert-modal").value = response.textContent;
-        document.getElementById("exampleModalLabel").innerHTML = question.textContent;
-        
-    }
-    function modalSubmit(){
-        let url = document.URL;
-        let question = document.getElementById("exampleModalLabel").textContent;
-        let response = document.getElementById("insert-modal").textContent;
+        if (typeof nodeReduct !== 'undefined' && nodeReduct != question) {document.getElementById("insert-modal").value = response.textContent;}
 
-        fetch("https://im-wiki-bot.herokuapp.com/?url='" + url + "'&question=" + question+ "&responce=" + response)
+        document.getElementById("exampleModalLabel").innerHTML = question.textContent;
+        window.nodeReduct = question
+    }
+    async function modalSubmit(){
+        let url = document.URL;
         
+        let question = document.getElementById("exampleModalLabel").textContent;
+        
+        let response = document.getElementById("insert-modal").value;
+        if (response=="У нас пока нет ответа на данный вопрос. Вы можете предложить свой вариант."){
+            return 0
+        }
+        try{
+            await fetch("https://im-wiki-bot.herokuapp.com/?url='" + url + "'&question=" + question+ "&responce=" + response)
+            nodeReduct.textContent = "✅" + nodeReduct.textContent
+        }catch{ 
+            console.error("error response to bot")
+        }
     }
 
 </script>
@@ -36,7 +45,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary" id="button-submit" onclick="modalSubmit()">Отправить</button>
+                <button type="button" class="btn btn-primary" id="button-submit"  data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="modalSubmit()">Отправить</button>
             </div>
         </div>
     </div>
