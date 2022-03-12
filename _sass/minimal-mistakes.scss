@@ -50,3 +50,19 @@ h2 {
     margin-top: 0px;
     background-color: rgba(187, 187, 187, 0);
   }
+.modal-content {
+    width: 80% !important;
+    display: block;
+    height: 100%;
+
+    max-width: none;
+    margin: auto;
+    .modal-body{
+        overflow-y: auto;
+    }
+
+}
+.modal-dialog{
+    max-width: none !important;
+    height: 100%;
+}
