@@ -1,3 +1,14 @@
+<script>
+
+    function modalView(a){
+      parrent = document.getElementById(a).parentNode.parentNode.cloneNode(true);
+      console.log(parent);
+      pop = document.getElementById("insert-modal").appendChild(parrent);
+    }
+  
+</script>
+  
+
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog ">
