@@ -43,3 +43,26 @@ h2 {
     background-color: rgba(187, 187, 187, 0.563);
     padding: 0.5rem;
 }
+
+.modal{
+    margin: 0px;
+    margin-left: 0px;
+    margin-top: 0px;
+    background-color: rgba(187, 187, 187, 0);
+  }
+.modal-content {
+    width: 80% !important;
+    display: block;
+    height: 100%;
+
+    max-width: none;
+    margin: auto;
+    .modal-body{
+        overflow-y: auto;
+    }
+
+}
+.modal-dialog{
+    max-width: none !important;
+    height: 100%;
+}

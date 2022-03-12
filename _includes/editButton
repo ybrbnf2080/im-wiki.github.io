@@ -1,0 +1,16 @@
+<script>
+
+  function modalView(a){
+    parrent = document.getElementById(a).parentNode.parentNode.cloneNode(true);
+    console.log(parent);
+    pop = document.getElementById("insert-modal").appendChild(parrent);
+  }
+
+</script>
+
+
+
+<!-- Button trigger modal -->
+<button type="button" id="buttonPopup" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="modalView(this.id)">
+  Open Popup
+</button>
