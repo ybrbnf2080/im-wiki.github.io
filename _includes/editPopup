@@ -5,7 +5,7 @@
         let question= pointBut.previousElementSibling.previousElementSibling
         let response = pointBut.previousElementSibling
 
-        document.getElementById("insert-modal").textContent = response.textContent;
+        document.getElementById("insert-modal").value = response.textContent;
         document.getElementById("exampleModalLabel").innerHTML = question.textContent;
         
     }
