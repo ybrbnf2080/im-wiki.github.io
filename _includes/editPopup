@@ -1,13 +1,25 @@
 <script>
 
-    function modalView(a){
-      parrent = document.getElementById(a).parentNode.parentNode.cloneNode(true);
-      console.log(parent);
-      pop = document.getElementById("insert-modal").appendChild(parrent);
+    function modalView(a) {
+        let pointBut = a.parentElement //document.getElementById(a).parentElement;
+        let question= pointBut.previousElementSibling.previousElementSibling
+        let response = pointBut.previousElementSibling
+
+        document.getElementById("insert-modal").textContent = response.textContent;
+        document.getElementById("exampleModalLabel").innerHTML = question.textContent;
+        
     }
-  
+    function modalSubmit(){
+        let url = document.URL;
+        let question = document.getElementById("exampleModalLabel").textContent;
+        let response = document.getElementById("insert-modal").textContent;
+
+        fetch("https://im-wiki-bot.herokuapp.com/?url='" + url + "'&question=" + question+ "&responce=" + response)
+        
+    }
+
 </script>
-  
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -17,11 +29,14 @@
                 <h5 class="modal-title" id="exampleModalLabel">Ninay</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-            <div class="modal-body" id="insert-modal">
+            <div class="modal-body" id="insert">
+                <textarea name="" id="insert-modal" cols="30" rows="10">
+                    
+                </textarea>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-primary" id="button-submit" onclick="modalSubmit()">Отправить</button>
             </div>
         </div>
     </div>
