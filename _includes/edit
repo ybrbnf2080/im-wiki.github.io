@@ -1,12 +1,3 @@
-<script>
-
-  function modalView(a){
-    parrent = document.getElementById(a).parentNode.parentNode.cloneNode(true);
-    console.log(parent);
-    pop = document.getElementById("insert-modal").appendChild(parrent);
-  }
-
-</script>
 
 
 
