@@ -12,5 +12,5 @@
 
 <!-- Button trigger modal -->
 <button type="button" id="buttonPopup" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" onclick="modalView(this.id)">
-  Launch demo modal
+  Open Popup
 </button>
