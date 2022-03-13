@@ -22,9 +22,6 @@
     let url = document.URL;
     const modal = document.getElementById("exampleModal");
     let question = modal.textContent;
-
-    let response = document.getElementById("insert-modal").value;
-
     try {
       //   await fetch(
       //     "https://im-wiki-bot.herokuapp.com/?url='" +
@@ -37,6 +34,9 @@
       nodeReduct.innerHTML =
         "✅ <i>ВАШ КОММЕНТАРИЙ ОТПРАВЛЕН, СПАСИБО!</i> " +
         nodeReduct.textContent;
+        const modalComplete = document.getElementById("completeModal")
+            const modalco= new bootstrap.Modal(modalComplete) 
+            modalco.toggle()
       var modalInstance = bootstrap.Modal.getInstance(modal);
       modalInstance.hide();
     } catch {
@@ -48,6 +48,22 @@
     }
   }
 </script>
+
+<div class="modal fade" id="completeModal" tabindex="-1" aria-labelledby="completeModalLabel" aria-hidden="true" style="z-index: 999999999999999;">
+    <div class="modal-dialog ">
+        <div class="modal-content" style="width: 60% !important; height: auto; display: flex; ">
+            <div class="modal-header">
+                <h5 class="modal-title" id="completeModalLabel">Успех!!!</h5>
+            </div>
+            <div class="modal-body" id="">
+                Данные отправленны, подождите пока модераторы подтвердят изменения
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <div
   class="modal fade"
@@ -76,6 +92,7 @@
           Закрыть
         </button>
       </div>
+
     </div>
   </div>
 </div>
