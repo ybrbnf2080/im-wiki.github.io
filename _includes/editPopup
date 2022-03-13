@@ -1,77 +1,121 @@
 <script>
-
-    function modalView(a) {
-        let pointBut = a.parentElement //document.getElementById(a).parentElement;
-        let question= pointBut.previousElementSibling.previousElementSibling
-        let response = pointBut.previousElementSibling
-        window.nodeReduct =typeof nodeReduct == 'undefined'? "lol" : nodeReduct
-        if (nodeReduct != question) {
-            document.getElementById("insert-modal").value = response.textContent;
-        }
-        if (document.getElementById("insert-modal").value =="У нас пока нет ответа на данный вопрос. Вы можете предложить свой вариант.") {
-            document.getElementById("insert-modal").value = ""
-        }
-
-        document.getElementById("exampleModalLabel").innerHTML = question.textContent;
-        window.nodeReduct = question;
-        
+  function modalView(a) {
+    let pointBut = a.parentElement; //document.getElementById(a).parentElement;
+    let question = pointBut.previousElementSibling.previousElementSibling;
+    let response = pointBut.previousElementSibling;
+    window.nodeReduct = typeof nodeReduct == "undefined" ? "lol" : nodeReduct;
+    if (nodeReduct != question) {
+      document.getElementById("insert-modal").value = response.textContent;
     }
-    async function modalSubmit(){
-        let url = document.URL;
-        const modal = document.getElementById("exampleModal")
-        let question = modal.textContent;
-        
-        let response = document.getElementById("insert-modal").value;
-        
-        try{
-            await fetch("https://im-wiki-bot.herokuapp.com/?url='" + url + "'&question=" + question+ "&responce=" + response);
-            nodeReduct.textContent = "✅" + nodeReduct.textContent;
-            var modalInstance = bootstrap.Modal.getInstance(modal);
-            modalInstance.hide();
-
-        }catch{ 
-            const modalErr = document.getElementById("errorModal")
-            const modaler= new bootstrap.Modal(modalErr) 
-            modaler.toggle()
-            console.error("error response to bot")
-            return 0
-        }
+    if (
+      document.getElementById("insert-modal").value ==
+      "У нас пока нет ответа на данный вопрос. Вы можете предложить свой вариант."
+    ) {
+      document.getElementById("insert-modal").value = "";
     }
 
+    document.getElementById("exampleModalLabel").innerHTML =
+      question.textContent;
+    window.nodeReduct = question;
+  }
+  async function modalSubmit() {
+    let url = document.URL;
+    const modal = document.getElementById("exampleModal");
+    let question = modal.textContent;
+
+    let response = document.getElementById("insert-modal").value;
+
+    try {
+      //   await fetch(
+      //     "https://im-wiki-bot.herokuapp.com/?url='" +
+      //       url +
+      //       "'&question=" +
+      //       question +
+      //       "&responce=" +
+      //       response
+      //   );
+      nodeReduct.innerHTML =
+        "✅ <i>ВАШ КОММЕНТАРИЙ ОТПРАВЛЕН, СПАСИБО!</i> " +
+        nodeReduct.textContent;
+      var modalInstance = bootstrap.Modal.getInstance(modal);
+      modalInstance.hide();
+    } catch {
+      const modalErr = document.getElementById("errorModal");
+      const modaler = new bootstrap.Modal(modalErr);
+      modaler.toggle();
+      console.error("error response to bot");
+      return 0;
+    }
+  }
 </script>
 
-<div class="modal fade" id="errorModal" tabindex="-1" aria-labelledby="errorModalLabel" aria-hidden="true" style="z-index: 999999999999999;">
-    <div class="modal-dialog ">
-        <div class="modal-content" style="width: 60% !important; height: auto; display: flex; ">
-            <div class="modal-header">
-                <h5 class="modal-title" id="errorModalLabel">Ошибка((</h5>
-            </div>
-            <div class="modal-body" id="">
-                Чтото пошло не так, если проблемма повторится свяжитесь с нашей <a target="_blank" href="https://t.me/+FHi3FnJaoWJkMDAx">поддержкой в телеграмме</a>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-            </div>
-        </div>
+<div
+  class="modal fade"
+  id="errorModal"
+  tabindex="-1"
+  aria-labelledby="errorModalLabel"
+  aria-hidden="true"
+  style="z-index: 999999999999999"
+>
+  <div class="modal-dialog">
+    <div
+      class="modal-content"
+      style="width: 60% !important; height: auto; display: flex"
+    >
+      <div class="modal-header">
+        <h5 class="modal-title" id="errorModalLabel">Ошибка((</h5>
+      </div>
+      <div class="modal-body" id="">
+        Чтото пошло не так, если проблемма повторится свяжитесь с нашей
+        <a target="_blank" href="https://t.me/+FHi3FnJaoWJkMDAx"
+          >поддержкой в телеграмме</a
+        >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Закрыть
+        </button>
+      </div>
     </div>
+  </div>
 </div>
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true" >
-    <div class="modal-dialog ">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ninay</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body" id="insert">
-                <textarea name="" id="insert-modal" cols="30" rows="10">
-                    
-                </textarea>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
-                <button type="button" class="btn btn-primary" id="button-submit"  onclick="modalSubmit()">Отправить</button>
-            </div>
-        </div>
+<div
+  class="modal fade"
+  id="exampleModal"
+  data-bs-backdrop="static"
+  data-bs-keyboard="false"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Ninay</h5>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body" id="insert">
+        <textarea name="" id="insert-modal" cols="30" rows="10"> </textarea>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Закрыть
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          id="button-submit"
+          onclick="modalSubmit()"
+        >
+          Отправить
+        </button>
+      </div>
     </div>
+  </div>
 </div>
