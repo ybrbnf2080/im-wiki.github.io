@@ -20,8 +20,9 @@
   }
   async function modalSubmit() {
     let url = document.URL;
-    const modal = document.getElementById("exampleModal");
-    let question = modal.textContent;
+    const modalLable = document.getElementById("exampleModalLabel");
+    let question = modalLable.textContent;
+    let response = document.getElementById("insert-modal").value;
     try {
           await fetch(
             "https://im-wiki-bot.herokuapp.com/?url='" +
