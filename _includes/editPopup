@@ -63,7 +63,9 @@
                 Данные отправленны, подождите пока модераторы подтвердят изменения
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Закрыть</button>
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="
+                  console.log(12222);
+                ">Закрыть</button>
             </div>
         </div>
     </div>
