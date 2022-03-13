@@ -12,15 +12,12 @@ include breadcrumbs.html %} {% endunless %} {% endif %}
   {% include sidebar.html %}
 
   <div class="archive">
-    <!-- <div class="top-bar">
-
+    <div class="top-bar">
       <div class="link-to">
         <div>
-          <h1>
-            {{page.title}}
-          </h1>
+          <h1>{{page.title}}</h1>
         </div>
-        <a
+        <!-- <a
           href="https://github.com/im-wiki/im-wiki.github.io/edit/main/_pages/{{ page.permalink }}.md"
           class="github"
         >
@@ -30,9 +27,9 @@ include breadcrumbs.html %} {% endunless %} {% endif %}
         <a href="https://t.me/+FHi3FnJaoWJkMDAx" class="telegram">
 
           <img src="/assets/images/wtf.png" alt="" style="" />
-        </a>
+        </a> -->
       </div>
-    </div> -->
+    </div>
     {% unless page.header.overlay_color or page.header.overlay_image %} {%
     endunless %} {{ content }}
     <div class="link-to">
