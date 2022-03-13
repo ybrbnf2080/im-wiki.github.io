@@ -23,14 +23,14 @@
     const modal = document.getElementById("exampleModal");
     let question = modal.textContent;
     try {
-      //   await fetch(
-      //     "https://im-wiki-bot.herokuapp.com/?url='" +
-      //       url +
-      //       "'&question=" +
-      //       question +
-      //       "&responce=" +
-      //       response
-      //   );
+          await fetch(
+            "https://im-wiki-bot.herokuapp.com/?url='" +
+              url +
+              "'&question=" +
+              question +
+              "&responce=" +
+              response
+          );
       nodeReduct.innerHTML =
         "✅ <i>ВАШ КОММЕНТАРИЙ ОТПРАВЛЕН, СПАСИБО!</i> " +
         nodeReduct.textContent;
