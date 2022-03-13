@@ -13,6 +13,7 @@
         }
 
         document.getElementById("exampleModalLabel").innerHTML = question.textContent;
+        window.nodeReduct = question;
         
     }
     async function modalSubmit(){
@@ -23,7 +24,7 @@
         let response = document.getElementById("insert-modal").value;
         
         try{
-            await fetch("https://im-wiki-bot.herokuapp.com/?url='" + url + "'&question=" + question+ "&responce=" + response);
+            //vawait fetch("https://im-wiki-bot.herokuapp.com/?url='" + url + "'&question=" + question+ "&responce=" + response);
             nodeReduct.textContent = "✅" + nodeReduct.textContent;
             var modalInstance = bootstrap.Modal.getInstance(modal);
             modalInstance.hide();
