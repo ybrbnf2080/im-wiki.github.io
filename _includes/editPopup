@@ -23,6 +23,9 @@
     const modalLable = document.getElementById("exampleModalLabel");
     let question = modalLable.textContent;
     let response = document.getElementById("insert-modal").value;
+
+
+    
     try {
           await fetch(
             "https://im-wiki-bot.herokuapp.com/?url='" +
@@ -33,7 +36,7 @@
               response
           );
       nodeReduct.innerHTML =
-        "✅ <i>ВАШ КОММЕНТАРИЙ ОТПРАВЛЕН, СПАСИБО!</i> " +
+        "✅ <b>ВАШ КОММЕНТАРИЙ ОТПРАВЛЕН, СПАСИБО!</b><br>" +
         nodeReduct.textContent;
         const modalComplete = document.getElementById("completeModal")
             const modalco= new bootstrap.Modal(modalComplete) 
@@ -41,9 +44,9 @@
       var modalInstance = bootstrap.Modal.getInstance(modal);
       modalInstance.hide();
     } catch {
-      const modalErr = document.getElementById("errorModal");
-      const modaler = new bootstrap.Modal(modalErr);
-      modaler.toggle();
+      //const modalErr = document.getElementById("errorModal");
+      //const modaler = new bootstrap.Modal(modalErr);
+      //modaler.toggle();
       console.error("error response to bot");
       return 0;
     }
