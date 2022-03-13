@@ -28,7 +28,7 @@
               url +
               "'&question=" +
               question +
-              "&responce=" +
+              "&response=" +
               response
           );
       nodeReduct.innerHTML =
