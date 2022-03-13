@@ -57,14 +57,16 @@
     <div class="modal-dialog ">
         <div class="modal-content" style="width: 60% !important; height: auto; display: flex; ">
             <div class="modal-header">
-                <h5 class="modal-title" id="completeModalLabel">Успех!!!</h5>
+                <h5 class="modal-title" id="completeModalLabel">Успех!</h5>
             </div>
             <div class="modal-body" id="">
-                Данные отправленны, подождите пока модераторы подтвердят изменения
+                Данные отправленны, подождите пока волонтёры сделают изменения. Вопросы вы можете задать в <a href="https://t.me/+FHi3FnJaoWJkMDAx">РАБОЧЕЙ ГРУППЕ</a>.
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="
-                  console.log(12222);
+                  const modal = document.getElementById('exampleModal');
+                  const modalInstance = bootstrap.Modal.getInstance(modal);
+                  modalInstance.hide();
                 ">Закрыть</button>
             </div>
         </div>
@@ -85,13 +87,10 @@
       style="width: 60% !important; height: auto; display: flex"
     >
       <div class="modal-header">
-        <h5 class="modal-title" id="errorModalLabel">Ошибка((</h5>
+        <h5 class="modal-title" id="errorModalLabel">Ошибка соединения!</h5>
       </div>
       <div class="modal-body" id="">
-        Чтото пошло не так, если проблемма повторится свяжитесь с нашей
-        <a target="_blank" href="https://t.me/+FHi3FnJaoWJkMDAx"
-          >поддержкой в телеграмме</a
-        >
+        Что-то пошло не так. Проверьте подключение к интернету. Если проблемма повторится - напишите в нашу <a href="https://t.me/+FHi3FnJaoWJkMDAx">РАБОЧУЮ ГРУППУ</a>.
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
@@ -115,7 +114,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Ninay</h5>
+        <h5 class="modal-title" id="exampleModalLabel"></h5>
         <button
           type="button"
           class="btn-close"
