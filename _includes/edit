@@ -4,7 +4,7 @@
     id="buttonPopup"
     class="btn btn-light btn-sm"
     data-bs-toggle="modal"
-    data-bs-target="#exampleModal"
+    data-bs-target="#inputModal"
     onclick="modalView(this)"
   >
     <span class="text-secondary">Ответить</span>

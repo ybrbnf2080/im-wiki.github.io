@@ -14,13 +14,13 @@
       document.getElementById("insert-modal").value = "";
     }
 
-    document.getElementById("exampleModalLabel").innerHTML =
+    document.getElementById("inputModalLabel").innerHTML =
       question.textContent;
     window.nodeReduct = question;
   }
   async function modalSubmit() {
     let url = document.URL;
-    const modalLable = document.getElementById("exampleModalLabel");
+    const modalLable = document.getElementById("inputModalLabel");
     let question = modalLable.textContent;
     let response = document.getElementById("insert-modal").value;
 
@@ -44,13 +44,12 @@
         const modalComplete = document.getElementById("completeModal")
             const modalco= new bootstrap.Modal(modalComplete) 
             modalco.toggle()
-      var modalInstance = bootstrap.Modal.getInstance(modal);
+      var modalInstance = bootstrap.Modal.getInstance(document.getElementById("inputModal"));
       modalInstance.hide();
     } catch {
       document.getElementsByClassName('dark-loader')[0].style.display = "none";
-      //TODO открывается и окно с ошибкой и окно с успехом
-      //const modalErr = document.getElementById("errorModal");
-      //const modaler = new bootstrap.Modal(modalErr);
+      const modalErr = document.getElementById("errorModal");
+      const modaler = new bootstrap.Modal(modalErr);
       modaler.toggle();
       console.error("error response to bot");
       return 0;
@@ -58,6 +57,7 @@
   }
 </script>
 
+<!-- Complete Modal -->
 <div class="modal fade" id="completeModal" tabindex="-1" aria-labelledby="completeModalLabel" aria-hidden="true" style="z-index: 999999999999999;">
     <div class="modal-dialog ">
         <div class="modal-content" style="width: 60% !important; height: auto; display: flex; ">
@@ -69,7 +69,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="
-                  const modal = document.getElementById('exampleModal');
+                  const modal = document.getElementById('inputModal');
                   const modalInstance = bootstrap.Modal.getInstance(modal);
                   modalInstance.hide();
                 ">Закрыть</button>
@@ -78,6 +78,7 @@
     </div>
 </div>
 
+<!-- Error Modal -->
 <div
   class="modal fade"
   id="errorModal"
@@ -106,20 +107,21 @@
     </div>
   </div>
 </div>
-<!-- Modal -->
+
+<!-- Input Modal -->
 <div
   class="modal fade"
-  id="exampleModal"
+  id="inputModal"
   data-bs-backdrop="static"
   data-bs-keyboard="false"
   tabindex="-1"
-  aria-labelledby="exampleModalLabel"
+  aria-labelledby="inputModalLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel"></h5>
+        <h5 class="modal-title" id="inputModalLabel"></h5>
         <button
           type="button"
           class="btn-close"
